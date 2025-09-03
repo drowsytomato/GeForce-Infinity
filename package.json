@@ -1,5 +1,5 @@
 {
-    "name": "geforce-infinity",
+    "name": "geforcenow-infinity-drowsy",
     "version": "1.2.0",
     "main": "dist/electron/main.js",
     "scripts": {
@@ -12,6 +12,7 @@
         "start": "bun run build && electron dist/electron/main.js",
         "pack": "electron-builder --dir",
         "dist": "electron-builder --win --linux",
+        "dist-linux": "electron-builder --linux",
         "rebuild": "electron-rebuild",
         "postinstall": "electron-builder install-app-deps",
         "release": "standard-version"
