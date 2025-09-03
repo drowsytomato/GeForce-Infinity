@@ -37,6 +37,7 @@ const userAgentOptions = [
 const resolutionOptions = [
     { label: "1366 x 768", value: "1366x768" },
     { label: "1920 x 1080", value: "1920x1080" },
+    { label: "1920 x 1200", value: "1920x1200" },
     { label: "2560 x 1440", value: "2560x1440" },
 ];
 
