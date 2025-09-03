@@ -37,7 +37,12 @@ export function createMainWindow(): BrowserWindow {
         console.log("[UserAgent] Using default");
     }
 
-    //mainWindow.webContents.openDevTools();
+    // Open DevTools in development so console logs are visible to the developer.
+    // if (!app.isPackaged) {
+    //     mainWindow.webContents.openDevTools({ mode: 'undocked' });
+    //     console.log('[MAIN] DevTools opened');
+    // }
+
     mainWindow.loadURL(GFN_WEBSITE);
     return mainWindow;
 }

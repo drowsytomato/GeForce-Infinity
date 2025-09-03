@@ -29,6 +29,18 @@ const App = () => {
             setConfig(config);
         });
 
+        // Listen for sidebar toggle messages coming from the preload -> main -> renderer
+        // path. This is how the injected button or other parts of the app can open
+        // the overlay sidebar.
+        try {
+            window.electronAPI.onSidebarToggle(() => {
+                console.debug('[OVERLAY] received sidebar-toggle via electronAPI');
+                setVisible((v) => !v);
+            });
+        } catch (e) {
+            console.error('[OVERLAY] failed to register onSidebarToggle', e);
+        }
+
         const handler = (e: KeyboardEvent) => {
             if (e.ctrlKey && e.key === "i") {
                 e.preventDefault();
