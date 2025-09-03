@@ -33,8 +33,8 @@ export async function syncFromCloud() {
             automute: data.gfiautomute ?? false,
             informed: data.gfinformed ?? false,
             monitorWidth: data.gfimonwidth ?? 1920,
-            monitorHeight: data.gfimonheight ?? 1080,
-            framesPerSecond: data.gfifps ?? 60
+            monitorHeight: data.gfimonheight ?? 1200,
+            framesPerSecond: data.gfifps ?? 120
         };
 
         // Save to disk via exposed IPC

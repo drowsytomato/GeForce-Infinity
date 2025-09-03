@@ -148,6 +148,7 @@ function registerShortcuts(mainWindow: BrowserWindow) {
     console.log("[Shortcuts] Sidebar shortcut registered?", success);*/
 
     if (!getConfig().informed) {
+        // mainWindow.setFullScreen(true);
         mainWindow.once("ready-to-show", () => {
             new Notification({
                 title: "GeForce Infinity",

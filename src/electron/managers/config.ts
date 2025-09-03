@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 import { Config, defaultConfig } from "../../shared/types";
 
-const configPath = path.join(app.getPath("userData"), "settings.json");
+const configPath = path.join(app.getPath("userData"), "settings_2.json");
 
 let currentConfig: Config = defaultConfig;
 

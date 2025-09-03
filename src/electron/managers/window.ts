@@ -11,10 +11,13 @@ export function createMainWindow(): BrowserWindow {
     const iconPath = getIconPath();
 
     const mainWindow = new BrowserWindow({
-        width: 1400,
-        height: 1000,
+        width: 1440,
+        height: 900,
         title: "GeForce Infinity",
         icon: iconPath || undefined,
+        // fullscreen: true,
+        // kiosk: true,
+        // fullscreenable: true,
         webPreferences: {
             preload: preloadPath,
             contextIsolation: true,
